@@ -28,7 +28,7 @@ var Rochambeau = {
         lost: 0,
     }
 
-}
+};
 function Player() {
     this.choice = null;
 }
@@ -47,11 +47,11 @@ function Player() {
 // This is the function for playing the game
 function playGame(){
     // Here is the game ruleset algorithm
-    if (player.choice == computer.choice) {
+    if (Rochambeau.player.choice == Rochambeau.computer.choice) {
         // We have a tie!
         ++score.ties;
         displayGameResult("tie")
-    } else if ((player.choice == choices.ROCK && computer.choice == choices.SCISSORS) || (player.choice == choices.ROCK && computer.choice == choices.LIZARD)) {
+    } else if ((Rochambeau.player.choices == Rochambeau.choices.ROCK && Rochambeau.computer.choices == Rochambeau.choices.SCISSORS) || (Rochambeau.player.choices == Rochambeau.choices.ROCK && Rochambeau.computer.choices == Rochambeau.choices.LIZARD)) {
         // Rock beats scissors or lizard - a win!
         ++score.wins;
         displayGameResult("win")
