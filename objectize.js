@@ -9,6 +9,9 @@ var Rochambeau = {
     lizardButton: document.getElementById("lizard"),
     spockButton: document.getElementById("spock"),
     playButton: document.getElementById("play"),
+    loser: document.getElementById("computerWin"),
+    winner: document.getElementById("playerWin"),
+
 
     choices: {
         ROCK: 0,
@@ -18,6 +21,7 @@ var Rochambeau = {
         SPOCK: 4,
     },
 
+    //need this or else function displays only numbers
     yourChoice: {
         0: "Rock",
         1: "Paper",
@@ -92,8 +96,8 @@ var Rochambeau = {
         document.getElementById("wins").textContent = Rochambeau.score.wins;
         document.getElementById("losses").textContent = Rochambeau.score.losses;
         document.getElementById("ties").textContent = Rochambeau.score.ties;
-        document.getElementById("playerWIN").textContent = Rochambeau.matches.won;
-        getElementById("computerWin").textContent = Rochambeau.matches.lost;
+        Rochambeau.winner.textContent = Rochambeau.matches.won;
+        Rochambeau.loser.textContent = Rochambeau.matches.lost;
     },
 
 
